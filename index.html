@@ -1,51 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://cdn.jsdelivr.net/npm/cassproject@latest/cass.min.js"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>This is banrab fry the guy, that rhymthsms</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            background-color: #f4f4f4;
-        }
+<script src="https://cdn.jsdelivr.net/npm/cassproject@latest/cass.min.js"></script>
 
-        header {
-            background: #333;
-            color: white;
-            padding: 20px;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        main {
-            padding: 20px;
-        }
+<title>This is banrab fry the guy, that rhymthsms</title>
 
-        img {
-            max-width: 90%;
-            height: auto;
-            border-radius: 12px;
-            margin-top: 20px;
-        }
-    </style>
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+#skills {
+    margin-top: 40px;
+}
+
+.skill-card {
+    background:white;
+    margin:10px auto;
+    padding:15px;
+    width:300px;
+    border-radius:10px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.2);
+}
+
+button {
+    padding:10px 20px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+</style>
+
 </head>
 
 <body>
 
 <header>
-    <h1>Real janab</h1>
+<h1>Real janab</h1>
 </header>
 
 <main>
-    <p>War of rights activist.</p>
 
-    <img 
-        src="https://avatars.githubusercontent.com/u/164216919?v=4"
-        alt="BarnFryTheGuy">
+<p>War of rights activist.</p>
+
+<img 
+src="https://avatars.githubusercontent.com/u/164216919?v=4"
+alt="BarnFryTheGuy">
+
+<br><br>
+
+<button onclick="loadSkills()">Load CaSS Skills</button>
+
+<div id="skills"></div>
+
 </main>
+
+<script>
+
+function loadSkills(){
+
+    const repo = new EcRepository();
+
+    repo.selectedServer = "https://dev.cassproject.org/api/";
+
+    repo.search("*", function(results){
+
+        const container = document.getElementById("skills");
+        container.innerHTML="";
+
+        results.forEach(skill => {
+
+            if(skill.name){
+
+                const card=document.createElement("div");
+                card.className="skill-card";
+
+                card.innerHTML=
+                "<h3>"+skill.name+"</h3>"+
+                "<p>"+(skill.description || "")+"</p>";
+
+                container.appendChild(card);
+
+            }
+
+        });
+
+    });
+
+}
+
+</script>
 
 </body>
 </html>
