@@ -6,9 +6,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>CaSS Dashboard</title>
+<title>CaSS Admin Dashboard</title>
 
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/admin.css">
 
 <script src="https://cdn.jsdelivr.net/npm/cassproject@latest/cass.min.js"></script>
 
@@ -16,41 +16,41 @@
 
 <body>
 
-<div class="layout">
+<div class="admin-bar">
+    <span class="logo">CaSS Admin</span>
+</div>
 
-<!-- bar -->
+<div class="admin-layout">
+
+<!-- Sidebar -->
 <div class="sidebar">
 
-<h2>CaSS</h2>
+<h2>Dashboard</h2>
 
-<button onclick="showDashboard()">Dashboard</button>
+<button onclick="showDashboard()">Overview</button>
 <button onclick="loadSkills()">Skills</button>
 <button onclick="clearSkills()">Clear</button>
 
 </div>
 
-<!-- Main -->
-<div class="content">
+<!-- Main Panel -->
+<div class="main">
 
-<header>
-<h1>Competency Dashboard</h1>
-</header>
+<div id="dashboard">
 
-<section id="dashboard">
-
-<div class="card">
+<div class="widget">
 <h3>Welcome</h3>
-<p>This is your CaSS competency system dashboard.</p>
+<p>CaSS competency management dashboard.</p>
 </div>
 
-<div class="card">
+<div class="widget">
 <h3>Framework</h3>
-<p>Load your skills framework to view competencies.</p>
+<p>Use the sidebar to load competencies.</p>
 </div>
 
-</section>
+</div>
 
-<section id="skills"></section>
+<div id="skills"></div>
 
 </div>
 
