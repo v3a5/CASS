@@ -1,62 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>CaSS Admin Dashboard</title>
-
-<link rel="stylesheet" href="css/admin.css">
+<title>CaSS Admin</title>
 
 <script src="https://cdn.jsdelivr.net/npm/cassproject@latest/cass.min.js"></script>
+<link rel="stylesheet" href="css/styles.css">
 
 </head>
 
 <body>
 
-<div class="admin-bar">
-    <span class="logo">CaSS Admin</span>
-</div>
+<div class="login">
 
-<div class="admin-layout">
+<h1>CaSS Admin</h1>
 
-<!-- Sidebar -->
-<div class="sidebar">
+<p>Connect to server</p>
 
-<h2>Dashboard</h2>
+<input id="serverIP" placeholder="45.66.39.122">
 
-<button onclick="showDashboard()">Overview</button>
-<button onclick="loadSkills()">Skills</button>
-<button onclick="clearSkills()">Clear</button>
+<button onclick="connectServer()">Connect</button>
 
 </div>
 
-<!-- Main Panel -->
-<div class="main">
-
-<div id="dashboard">
-
-<div class="widget">
-<h3>Welcome</h3>
-<p>CaSS competency management dashboard.</p>
-</div>
-
-<div class="widget">
-<h3>Framework</h3>
-<p>Use the sidebar to load competencies.</p>
-</div>
-
-</div>
-
-<div id="skills"></div>
-
-</div>
-
-</div>
-
-<script src="js/app.js"></script>
+<script src="js/cass.js"></script>
 
 </body>
+
 </html>
