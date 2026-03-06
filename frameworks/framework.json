@@ -1,1 +1,17 @@
-
+{
+  "framework": "Example Skills",
+  "competencies": [
+    {
+      "name": "War of Rights Activism",
+      "description": "Advocating for rights in historical war settings"
+    },
+    {
+      "name": "Community Leadership",
+      "description": "Leading groups and organising discussions"
+    },
+    {
+      "name": "Web Development",
+      "description": "Building websites using HTML, CSS and JavaScript"
+    }
+  ]
+}
