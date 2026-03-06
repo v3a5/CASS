@@ -1,42 +1,67 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    background-color: #f4f4f4;
+body{
+margin:0;
+font-family:Segoe UI,Arial;
+background:#f2f4f7;
 }
 
-header {
-    background: #333;
-    color: white;
-    padding: 20px;
+.layout{
+display:flex;
+height:100vh;
 }
 
-main {
-    padding: 20px;
+.sidebar{
+width:220px;
+background:#1f2937;
+color:white;
+padding:20px;
+display:flex;
+flex-direction:column;
 }
 
-img {
-    max-width: 90%;
-    height: auto;
-    border-radius: 12px;
-    margin-top: 20px;
+.sidebar h2{
+margin-bottom:20px;
 }
 
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
+.sidebar button{
+margin-bottom:10px;
+padding:10px;
+border:none;
+background:#374151;
+color:white;
+cursor:pointer;
+border-radius:6px;
 }
 
-#skills {
-    margin-top: 40px;
+.sidebar button:hover{
+background:#4b5563;
 }
 
-.skill-card {
-    background: white;
-    margin: 10px auto;
-    padding: 15px;
-    width: 300px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+.content{
+flex:1;
+padding:20px;
+overflow:auto;
+}
+
+header{
+margin-bottom:20px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+margin-bottom:15px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.skill-card{
+background:white;
+padding:15px;
+border-radius:8px;
+margin-bottom:10px;
+box-shadow:0 2px 5px rgba(0,0,0,0.15);
+}
+
+#skills{
+margin-top:20px;
 }
