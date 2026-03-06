@@ -1,17 +1,17 @@
 {
- "framework": "Example Framework",
+ "framework": "CaSS Example Framework",
  "competencies": [
   {
    "name": "Leadership",
-   "description": "Ability to lead and organise groups."
+   "description": "Ability to lead teams and communities."
   },
   {
-   "name": "Community Engagement",
-   "description": "Working with communities and teams."
+   "name": "Community Management",
+   "description": "Managing discussions and community initiatives."
   },
   {
    "name": "Web Development",
-   "description": "Building websites and applications."
+   "description": "Creating websites using HTML, CSS and JavaScript."
   }
  ]
 }
