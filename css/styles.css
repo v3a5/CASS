@@ -1,17 +1,28 @@
 body{
 margin:0;
-font-family:Segoe UI,Arial;
-background:#f2f4f7;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
+background:#f0f2f5;
 }
 
-.layout{
+.admin-bar{
+background:#1d2327;
+color:white;
+padding:12px 20px;
+font-size:18px;
+}
+
+.logo{
+font-weight:bold;
+}
+
+.admin-layout{
 display:flex;
-height:100vh;
+height:calc(100vh - 44px);
 }
 
 .sidebar{
 width:220px;
-background:#1f2937;
+background:#23282d;
 color:white;
 padding:20px;
 display:flex;
@@ -20,48 +31,48 @@ flex-direction:column;
 
 .sidebar h2{
 margin-bottom:20px;
+font-size:18px;
 }
 
 .sidebar button{
-margin-bottom:10px;
-padding:10px;
+background:none;
 border:none;
-background:#374151;
-color:white;
+color:#c3c4c7;
+text-align:left;
+padding:10px;
 cursor:pointer;
-border-radius:6px;
+font-size:15px;
+border-radius:4px;
 }
 
 .sidebar button:hover{
-background:#4b5563;
+background:#2271b1;
+color:white;
 }
 
-.content{
+.main{
 flex:1;
-padding:20px;
+padding:30px;
 overflow:auto;
 }
 
-header{
-margin-bottom:20px;
-}
-
-.card{
+.widget{
 background:white;
 padding:20px;
-border-radius:10px;
-margin-bottom:15px;
-box-shadow:0 2px 8px rgba(0,0,0,0.1);
+border-radius:8px;
+margin-bottom:20px;
+box-shadow:0 1px 3px rgba(0,0,0,0.1);
 }
 
 .skill-card{
 background:white;
 padding:15px;
-border-radius:8px;
+border-left:4px solid #2271b1;
 margin-bottom:10px;
-box-shadow:0 2px 5px rgba(0,0,0,0.15);
+border-radius:6px;
+box-shadow:0 1px 3px rgba(0,0,0,0.1);
 }
 
-#skills{
-margin-top:20px;
+.skill-card h3{
+margin-top:0;
 }
